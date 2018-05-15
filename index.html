@@ -14,35 +14,138 @@
 <body>
     <div class="container">
         <div class="jumbotron">
-          <h2>Setup SmartHome</h2> 
-          <h4>Welcome to smartHome! Please setup the floor plan</h4> 
-        <div class="line"></div>
+            <h2>Setup SmartHome</h2> 
+            <h4>Welcome to smartHome! Please setup the floor plan</h4> 
+            <div class="line"></div>
 
-        <form>
+        
             <div class="row">
-                <div class="col-md-5">
-                    <div class="input-group">
-                        <span class="input-group-addon">Number of rooms</span>
-                        <input id="roomNum" type="text" class="form-control" name="roomNum" placeholder="Maximum of 20 rooms">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">Number of floors</span>
+                                <input id="flrNum" type="text" class="form-control" name="flrNum" placeholder="Maximum of 3 floors">
+                            </div>
+                            <br>       
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">Add rooms</span>
+                                <input id="roomNum" type="text" class="form-control" name="roomNum" placeholder="Maximum of 20 rooms">
+                            </div>
+                            <span class="help-block">Additional rooms aside from the default existing rooms.</span>
+                        </div>
+                        <br>
                     </div>
-                    <br>
-                    <button id="btnSet"type="button" class="btn btn-default">Set</button>
-                    <button id="btnReset"type="button" class="btn btn-default">Reset</button>
-                </div>
+                    <div class= "row">
+                        <div class="col-md-6">
+                            <button id="btnSet"type="button" class="btn btn-default">Set</button>
+                            <button id="btnReset"type="button" class="btn btn-default">Reset</button> 
+                        </div>
+                    </div>
+                </form>
             </div>
             <br>
             <div class= "row">
-                <div class="panel panel-info">
-                        <div class="panel-heading">Customize room information</div>
-                        <div class="panel-body">
-                            <div id="roomInf" class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" id="roomInfH">Customize room information</div>
+                    <div class="panel-body" id="roomInfB">
+                        <form class="form-inline">
+                            <div class= "form-group row">
+                                <div class="col-md-8">
+                                    <div class="dropdown d-inline-block">
+                                        <select class="form-control" id="selectRm">
+                                            <option id="kitchen">Kitchen</option>
+                                            <option id="lounge">Lounge</option>
+                                            <option id="laundry">Laundry</option>
+                                            <option id="garage">Garage</option>
+                                            <option id="bath">Bathroom</option>
+                                            <option id="restroom">Restroom</option>
+                                            <option id="restroom">bedroom</option>
+                                        </select>                                            
+                                        <input id="inputRmName" type="text" class="form-control" name="inputRmName" placeholder="Edit room name">
+                                    </div>
+                                <br>    
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Room Location</span>
+                                        <select id="selectFlr" class="form-control" name="selectFlr">
+                                                
+                                        </select>
+                                    </div>
+                                </div>
+                            </div> 
+                            
+                            <div class= "row">
+                                <div class="col-md-12">
+                                    <button id="btnModify"type="button" class="btn btn-default">Modify</button>
+                                    <button id="btnSkip"type="button" class="btn btn-default">Skip</button> 
                                     
+                                </div>
+                            </div>    
+                        </form>
+
+                    </div> <!--/Panel body-->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="panel panel-info" id="allRooms">
+                    <div class="panel-heading">All Rooms</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/kitchen-icon.png" class="img-circle img-responsive" id="imgKitchen">
+                            </div>
+                            <div class="col-md-4">
+                                    <img src="images/bathroom-icon.png" class="img-circle img-responsive" id="imgBathroom">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="images/lounge-icon.png" class="img-circle img-responsive" id="imgLounge">
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/bedroom.png" class="img-circle img-responsive" id="imgBedroom">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="images/laundry.-iconpng" class="img-circle img-responsive" id="imgLaundry">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="images/garage-icon.png" class="img-circle img-responsive" id="imgGarage">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/restroom-icon.png" class="img-circle img-responsive" id="imgRestroom">
+                            </div>
+                            <!--/Insert additional rooms here-->
+                        </div>
+                    </div> <!--/Panel body-->
                 </div>
             </div>
             
-        </form>
+            <div class="row">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Adjust Temperature</div>
+                    <div class="panel-body">
+    
+                    </div> <!--/Panel body-->
+                </div>
+            </div>
+
+            <div class="row">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">Music</div>
+                        <div class="panel-body">
+        
+                        </div> <!--/Panel body-->
+                    </div>
+                </div>
+       
         
         
         

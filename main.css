@@ -16,3 +16,12 @@ height: 1px;
 border-bottom: 1px dashed #f65356;
 margin: 40px 0;
 }
+
+#selectFlr {
+    width: 200px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
