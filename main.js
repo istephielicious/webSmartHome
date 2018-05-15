@@ -14,9 +14,9 @@ $(document).ready(function() {
             alert("Please input minimum of 1 room and maximum of 20 rooms.");
         }
         else {
-            $(this).addClass("disabled");
+            $(this).addClass("disabled").prop("disabled", true);
             $("#btnReset").show();
-            $(".panel").show();
+            $(".panel").slideDown();
 
             //Add elements inside the panel.
             for(var i=1; i<=roomNumber; i++) {
@@ -32,8 +32,9 @@ $(document).ready(function() {
     //Reset Button.
     $("#btnReset").click(function() {
         $("#roomNum").val("");
-        $("#btnSet").removeClass("disabled");
-        $(".panel").hide();
+        $("#btnSet").removeClass("disabled").prop("disabled", false);;
+        $(".panel").slideUp();
+        $("#roomInf").empty();
         $(this).hide();
         
     });
